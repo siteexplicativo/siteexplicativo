@@ -39,37 +39,49 @@
         font-size: 1rem;
       }
 
-      .icon-link {
+      .item-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .browser-btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 28px;
-        height: 28px;
-        margin: 6px 6px 0 0;
-        border-radius: 50%;
-        background: #f2f2f2;
-        border: 1px solid #d9d9d9;
+        padding: 5px 10px;
+        border-radius: 999px;
+        font-size: 0.72rem;
+        font-weight: 700;
         text-decoration: none;
-        transition: transform 0.2s ease, background 0.2s ease;
+        letter-spacing: 0.02em;
+        transition: transform 0.2s ease, opacity 0.2s ease;
       }
 
-      .icon-link:hover {
-        transform: scale(1.08);
-        background: #e7e7e7;
+      .browser-btn:hover {
+        transform: translateY(-1px);
+        opacity: 0.9;
       }
 
-      .icon-link svg {
-        width: 14px;
-        height: 14px;
-        stroke: #111111;
-        fill: none;
-        stroke-width: 2;
-        stroke-linecap: round;
-        stroke-linejoin: round;
+      .browser-btn.firefox {
+        background: #dfecff;
+        color: #0d4bbf;
+        border: 1px solid #b9d1ff;
+      }
+
+      .browser-btn.chrome {
+        background: #eaf9ee;
+        color: #1a7f43;
+        border: 1px solid #bfe7ca;
       }
 
       .platform-links {
-        margin-top: 8px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 0;
       }
     </style>
   </head>
@@ -80,104 +92,100 @@
       <h2>Bloqueadores de propagandas e rastreadores</h2>
       <ul>
         <li>
-          <strong>uBlock Origin</strong><br>
-          Extensão leve para bloquear anúncios, rastreadores e scripts invasivos.
-          <div class="platform-links">
-            <a class="icon-link" href="https://addons.mozilla.org/pt-BR/firefox/addon/ublock-origin/" target="_blank" rel="noopener noreferrer" aria-label="Abrir uBlock Origin no Firefox">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 7.07L20 17l-2 2-2.93-2.93A5 5 0 0 0 10 13Z"/><path d="M14 10V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/><path d="M6 12H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M18 4h2a2 2 0 0 1 2 2v2"/><path d="M14 18h2a2 2 0 0 1 2 2v2"/></svg>
-            </a>
-            <a class="icon-link" href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm" target="_blank" rel="noopener noreferrer" aria-label="Abrir uBlock Origin no Chrome">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 7.07L20 17l-2 2-2.93-2.93A5 5 0 0 0 10 13Z"/><path d="M14 10V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/><path d="M6 12H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M18 4h2a2 2 0 0 1 2 2v2"/><path d="M14 18h2a2 2 0 0 1 2 2v2"/></svg>
-            </a>
+          <div class="item-header">
+            <strong>uBlock Origin</strong>
+            <div class="platform-links">
+              <a class="browser-btn firefox" href="https://addons.mozilla.org/pt-BR/firefox/addon/ublock-origin/" target="_blank" rel="noopener noreferrer" aria-label="Abrir uBlock Origin no Firefox">Firefox</a>
+              <a class="browser-btn chrome" href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm" target="_blank" rel="noopener noreferrer" aria-label="Abrir uBlock Origin no Chrome">Chrome</a>
+            </div>
           </div>
+          <p>Extensão leve para bloquear anúncios, rastreadores e scripts invasivos.</p>
         </li>
 
         <li>
-          <strong>AdGuard</strong><br>
-          Ajuda a bloquear publicidade e reforçar a privacidade durante a navegação.
-          <div class="platform-links">
-            <a class="icon-link" href="https://addons.mozilla.org/pt-BR/firefox/addon/adguard-adblocker/" target="_blank" rel="noopener noreferrer" aria-label="Abrir AdGuard no Firefox">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 7.07L20 17l-2 2-2.93-2.93A5 5 0 0 0 10 13Z"/><path d="M14 10V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/><path d="M6 12H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M18 4h2a2 2 0 0 1 2 2v2"/><path d="M14 18h2a2 2 0 0 1 2 2v2"/></svg>
-            </a>
-            <a class="icon-link" href="https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg" target="_blank" rel="noopener noreferrer" aria-label="Abrir AdGuard no Chrome">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 7.07L20 17l-2 2-2.93-2.93A5 5 0 0 0 10 13Z"/><path d="M14 10V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/><path d="M6 12H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M18 4h2a2 2 0 0 1 2 2v2"/><path d="M14 18h2a2 2 0 0 1 2 2v2"/></svg>
-            </a>
+          <div class="item-header">
+            <strong>AdGuard</strong>
+            <div class="platform-links">
+              <a class="browser-btn firefox" href="https://addons.mozilla.org/pt-BR/firefox/addon/adguard-adblocker/" target="_blank" rel="noopener noreferrer" aria-label="Abrir AdGuard no Firefox">Firefox</a>
+              <a class="browser-btn chrome" href="https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg" target="_blank" rel="noopener noreferrer" aria-label="Abrir AdGuard no Chrome">Chrome</a>
+            </div>
           </div>
+          <p>Ajuda a bloquear publicidade e reforçar a privacidade durante a navegação.</p>
         </li>
 
         <li>
-          <strong>Ghostery</strong><br>
-          Permite bloquear rastreadores e ver quais elementos acompanham sua navegação.
-          <div class="platform-links">
-            <a class="icon-link" href="https://addons.mozilla.org/pt-BR/firefox/addon/ghostery/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Ghostery no Firefox">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 7.07L20 17l-2 2-2.93-2.93A5 5 0 0 0 10 13Z"/><path d="M14 10V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/><path d="M6 12H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M18 4h2a2 2 0 0 1 2 2v2"/><path d="M14 18h2a2 2 0 0 1 2 2v2"/></svg>
-            </a>
-            <a class="icon-link" href="https://chromewebstore.google.com/detail/ghostery-%E2%80%94-privacy-adblocker/mlomiejdfkolichcflejclcbmpeaniij" target="_blank" rel="noopener noreferrer" aria-label="Abrir Ghostery no Chrome">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 7.07L20 17l-2 2-2.93-2.93A5 5 0 0 0 10 13Z"/><path d="M14 10V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/><path d="M6 12H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M18 4h2a2 2 0 0 1 2 2v2"/><path d="M14 18h2a2 2 0 0 1 2 2v2"/></svg>
-            </a>
+          <div class="item-header">
+            <strong>Ghostery</strong>
+            <div class="platform-links">
+              <a class="browser-btn firefox" href="https://addons.mozilla.org/pt-BR/firefox/addon/ghostery/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Ghostery no Firefox">Firefox</a>
+              <a class="browser-btn chrome" href="https://chromewebstore.google.com/detail/ghostery-%E2%80%94-privacy-adblocker/mlomiejdfkolichcflejclcbmpeaniij" target="_blank" rel="noopener noreferrer" aria-label="Abrir Ghostery no Chrome">Chrome</a>
+            </div>
           </div>
+          <p>Permite bloquear rastreadores e ver quais elementos acompanham sua navegação.</p>
         </li>
 
         <li>
-          <strong>Privacy Badger</strong><br>
-          Bloqueia trackers automaticamente com base no comportamento dos sites.
-          <div class="platform-links">
-            <a class="icon-link" href="https://addons.mozilla.org/pt-BR/firefox/addon/privacy-badger17/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Privacy Badger no Firefox">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 7.07L20 17l-2 2-2.93-2.93A5 5 0 0 0 10 13Z"/><path d="M14 10V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/><path d="M6 12H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M18 4h2a2 2 0 0 1 2 2v2"/><path d="M14 18h2a2 2 0 0 1 2 2v2"/></svg>
-            </a>
-            <a class="icon-link" href="https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp" target="_blank" rel="noopener noreferrer" aria-label="Abrir Privacy Badger no Chrome">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 7.07L20 17l-2 2-2.93-2.93A5 5 0 0 0 10 13Z"/><path d="M14 10V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/><path d="M6 12H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M18 4h2a2 2 0 0 1 2 2v2"/><path d="M14 18h2a2 2 0 0 1 2 2v2"/></svg>
-            </a>
+          <div class="item-header">
+            <strong>Privacy Badger</strong>
+            <div class="platform-links">
+              <a class="browser-btn firefox" href="https://addons.mozilla.org/pt-BR/firefox/addon/privacy-badger17/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Privacy Badger no Firefox">Firefox</a>
+              <a class="browser-btn chrome" href="https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp" target="_blank" rel="noopener noreferrer" aria-label="Abrir Privacy Badger no Chrome">Chrome</a>
+            </div>
           </div>
+          <p>Bloqueia trackers automaticamente com base no comportamento dos sites.</p>
         </li>
 
         <li>
-          <strong>Brave Shields</strong><br>
-          Oferece proteção contra anúncios e rastreamento diretamente no navegador.
-          <div class="platform-links">
-            <a class="icon-link" href="https://brave.com/pt/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Brave">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 7.07L20 17l-2 2-2.93-2.93A5 5 0 0 0 10 13Z"/><path d="M14 10V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/><path d="M6 12H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M18 4h2a2 2 0 0 1 2 2v2"/><path d="M14 18h2a2 2 0 0 1 2 2v2"/></svg>
-            </a>
+          <div class="item-header">
+            <strong>Brave Shields</strong>
+            <div class="platform-links">
+              <a class="browser-btn chrome" href="https://brave.com/pt/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Brave">Brave</a>
+            </div>
           </div>
+          <p>Oferece proteção contra anúncios e rastreamento diretamente no navegador.</p>
         </li>
 
         <li>
-          <strong>WOT</strong><br>
-          Extensão que avalia a reputação de sites e ajuda a identificar riscos de segurança.
-          <div class="platform-links">
-            <a class="icon-link" href="https://addons.mozilla.org/pt-BR/firefox/addon/wot-safe-browsing-tool/" target="_blank" rel="noopener noreferrer" aria-label="Abrir WOT no Firefox">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 7.07L20 17l-2 2-2.93-2.93A5 5 0 0 0 10 13Z"/><path d="M14 10V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/><path d="M6 12H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M18 4h2a2 2 0 0 1 2 2v2"/><path d="M14 18h2a2 2 0 0 1 2 2v2"/></svg>
-            </a>
-            <a class="icon-link" href="https://www.mywot.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir WOT no Chrome">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 7.07L20 17l-2 2-2.93-2.93A5 5 0 0 0 10 13Z"/><path d="M14 10V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/><path d="M6 12H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M18 4h2a2 2 0 0 1 2 2v2"/><path d="M14 18h2a2 2 0 0 1 2 2v2"/></svg>
-            </a>
+          <div class="item-header">
+            <strong>WOT</strong>
+            <div class="platform-links">
+              <a class="browser-btn firefox" href="https://addons.mozilla.org/pt-BR/firefox/addon/wot-safe-browsing-tool/" target="_blank" rel="noopener noreferrer" aria-label="Abrir WOT no Firefox">Firefox</a>
+              <a class="browser-btn chrome" href="https://www.mywot.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir WOT no Chrome">Chrome</a>
+            </div>
           </div>
+          <p>Extensão que avalia a reputação de sites e ajuda a identificar riscos de segurança.</p>
         </li>
 
         <li>
-          <strong>Decentraleyes</strong><br>
-          Armazena recursos comuns localmente para reduzir o carregamento de scripts de terceiros e melhorar a privacidade.
-          <div class="platform-links">
-            <a class="icon-link" href="https://addons.mozilla.org/pt-BR/firefox/addon/decentraleyes/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Decentraleyes no Firefox">🔗</a>
-            <a class="icon-link" href="https://chrome.google.com/webstore/detail/decentraleyes/ldpochfccmkkmhdbclhcbfjnlcpppdai" target="_blank" rel="noopener noreferrer" aria-label="Abrir Decentraleyes no Chrome">🔗</a>
+          <div class="item-header">
+            <strong>Decentraleyes</strong>
+            <div class="platform-links">
+              <a class="browser-btn firefox" href="https://addons.mozilla.org/pt-BR/firefox/addon/decentraleyes/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Decentraleyes no Firefox">Firefox</a>
+              <a class="browser-btn chrome" href="https://chrome.google.com/webstore/detail/decentraleyes/ldpochfccmkkmhdbclhcbfjnlcpppdai" target="_blank" rel="noopener noreferrer" aria-label="Abrir Decentraleyes no Chrome">Chrome</a>
+            </div>
           </div>
+          <p>Armazena recursos comuns localmente para reduzir o carregamento de scripts de terceiros e melhorar a privacidade.</p>
         </li>
 
         <li>
-          <strong>Disconnect</strong><br>
-          Bloqueia rastreadores e elementos que coletam dados de navegação em sites.
-          <div class="platform-links">
-            <a class="icon-link" href="https://addons.mozilla.org/pt-BR/firefox/addon/disconnect/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Disconnect no Firefox">🔗</a>
-            <a class="icon-link" href="https://chromewebstore.google.com/detail/disconnect-%E2%80%94-tracker-prot/jeoacafpbcihiomhlakheieifhpjdfeo" target="_blank" rel="noopener noreferrer" aria-label="Abrir Disconnect no Chrome">🔗</a>
+          <div class="item-header">
+            <strong>Disconnect</strong>
+            <div class="platform-links">
+              <a class="browser-btn firefox" href="https://addons.mozilla.org/pt-BR/firefox/addon/disconnect/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Disconnect no Firefox">Firefox</a>
+              <a class="browser-btn chrome" href="https://chromewebstore.google.com/detail/disconnect-%E2%80%94-tracker-prot/jeoacafpbcihiomhlakheieifhpjdfeo" target="_blank" rel="noopener noreferrer" aria-label="Abrir Disconnect no Chrome">Chrome</a>
+            </div>
           </div>
+          <p>Bloqueia rastreadores e elementos que coletam dados de navegação em sites.</p>
         </li>
 
         <li>
-          <strong>Microsoft Defender Browser Protection</strong><br>
-          Ajuda a identificar sites maliciosos e reforça a proteção contra ameaças online.
-          <div class="platform-links">
-            <a class="icon-link" href="https://chromewebstore.google.com/detail/microsoft-defender-browse/bkbeeeffjjeopflfhgeknacdieedcoml" target="_blank" rel="noopener noreferrer" aria-label="Abrir Microsoft Defender Browser Protection no Chrome">🔗</a>
+          <div class="item-header">
+            <strong>Microsoft Defender Browser Protection</strong>
+            <div class="platform-links">
+              <a class="browser-btn chrome" href="https://chromewebstore.google.com/detail/microsoft-defender-browse/bkbeeeffjjeopflfhgeknacdieedcoml" target="_blank" rel="noopener noreferrer" aria-label="Abrir Microsoft Defender Browser Protection no Chrome">Chrome</a>
+            </div>
           </div>
+          <p>Ajuda a identificar sites maliciosos e reforça a proteção contra ameaças online.</p>
         </li>
       </ul>
 
